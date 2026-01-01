@@ -1,0 +1,125 @@
+/*
+Theme Name: Valber Brito
+Theme URI: https://valberbrito.com.br/
+Author: Odenilson
+Author URI: https://valberbrito.com.br/
+Description: Tema oficial do músico e educador musical Valber Brito, focado em ensino de escalas, harmonia, improvisação e teoria musical.
+Version: 1.0
+Text Domain: valber-brito
+Tags: music, musician, music teacher, guitar, harmony, scales, improvisation, blog, education
+*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 0;
+
+}
+
+header {
+    background: #4A240E;
+
+}
+
+.navbar {
+    background-color: #4A240E;
+}
+
+.navbar-nav .menu-item>a {
+    color: #FFFFFF;
+}
+
+.navbar-nav .menu-item>a:hover {
+    color: #F8F9FA;
+    opacity: 0.85;
+}
+
+
+/* Aplicando espaçamento entre itens do menu */
+.navbar-nav .nav-item:last-child {
+    margin-right: 0;
+}
+
+.navbar-nav>li>a {
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.site-content {
+    padding-top: 70px;
+    /* altura do header */
+}
+
+.hero-blog {
+    background-color: #F8F9FA;
+}
+
+.hero-blog h1 {
+    color: #212529;
+}
+
+.card {
+    background-color: #FFFFFF;
+}
+.post-content a {
+    color: #4A240E;
+    text-decoration: underline;
+}
+.post-content a:hover {
+    color: #6A3A1E;
+}
+
+
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer {
+    background-color: #F8F9FA;
+    color: #212529;
+    margin-top: 4rem;
+}
+
+.site-footer p {
+    margin-bottom: 0.5rem;
+}
+
+/* Títulos das colunas */
+.site-footer .footer-title {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #212529;
+}
+
+/* Links do footer */
+.site-footer a {
+    color: #6C757D;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 0.4rem;
+}
+
+.site-footer a:hover {
+    color: #4A240E;
+    text-decoration: underline;
+}
+
+/* Listas */
+.site-footer ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+/* Linha inferior */
+.footer-bottom {
+    border-top: 1px solid #ddd;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    text-align: center;
+    color: #6C757D;
+    font-size: 0.875rem;
+}
