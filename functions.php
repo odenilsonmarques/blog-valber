@@ -16,7 +16,7 @@ add_action('wp_enqueue_scripts', 'blog_valber_assets');
 
 
 
-function blogvalber_config()
+function blogvalber_config_theme_setup()
 {
     // Registro de menus
     register_nav_menus(array(
@@ -36,8 +36,8 @@ function blogvalber_config()
 
     // Suporte a logo personalizada
     add_theme_support('custom-logo', array(
-        'height'      => 60,
-        'width'       => 200,
+        'height'      => 80,
+        'width'       => 240,
         'flex-height' => true,
         'flex-width'  => true,
     ));
@@ -49,4 +49,4 @@ function blogvalber_config()
     add_image_size('blog-thumb', 400, 250, true);
 }
 
-add_action('after_setup_theme', 'blogvalber_config');
+add_action('after_setup_theme', 'blogvalber_config_theme_setup');

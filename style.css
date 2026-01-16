@@ -63,15 +63,48 @@ header {
 .card {
     background-color: #FFFFFF;
 }
+
 .post-content a {
     color: #4A240E;
     text-decoration: underline;
 }
+
 .post-content a:hover {
     color: #6A3A1E;
 }
 
 
+
+
+/* HERO HOME */
+.hero-home {
+    background-color: #F8F9FA;
+}
+
+.hero-home h1 {
+    font-size: 2.4rem;
+    color: #212529;
+}
+
+.hero-home-image {
+    width: 100%;
+    max-width: 380px;
+    height: 380px;
+    /* background-color: #E0E0E0; */
+    /* placeholder */
+    border-radius: 12px;
+    margin: 0 auto;
+}
+
+
+
+.hero-home .custom-btn-hero-home {
+    background-color: #4A240E;
+    color: #FFFFFF;
+    border: none;
+   
+    transition: background-color 0.3s ease;
+}
 
 
 /* =========================

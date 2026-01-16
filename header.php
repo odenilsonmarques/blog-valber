@@ -39,3 +39,10 @@
             </div>
         </nav>
     </header>
+
+    <style>
+        .custom-logo {
+            max-height: 50px;
+            width: auto;
+        }
+    </style>
