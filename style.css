@@ -8,18 +8,17 @@ Version: 1.0
 Text Domain: valber-brito
 Tags: music, musician, music teacher, guitar, harmony, scales, improvisation, blog, education
 */
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    /* background-color: #f4f4f4; */
     color: #333;
     line-height: 1.6;
     padding: 0;
-
 }
 
 header {
     background: #4A240E;
-
 }
 
 .navbar {
@@ -35,7 +34,6 @@ header {
     opacity: 0.85;
 }
 
-
 /* Aplicando espaçamento entre itens do menu */
 .navbar-nav .nav-item:last-child {
     margin-right: 0;
@@ -49,7 +47,12 @@ header {
 
 .site-content {
     padding-top: 70px;
-    /* altura do header */
+}
+
+/* classe padrao do wordpress para logo personalizado */
+.custom-logo {
+    max-height: 50px;
+    width: auto;
 }
 
 .hero-blog {
@@ -73,9 +76,6 @@ header {
     color: #6A3A1E;
 }
 
-
-
-
 /* HERO HOME */
 .hero-home {
     background-color: #F8F9FA;
@@ -90,27 +90,164 @@ header {
     width: 100%;
     max-width: 380px;
     height: 380px;
-    /* background-color: #E0E0E0; */
-    /* placeholder */
     border-radius: 12px;
     margin: 0 auto;
 }
-
-
 
 .hero-home .custom-btn-hero-home {
     background-color: #4A240E;
     color: #FFFFFF;
     border: none;
-   
     transition: background-color 0.3s ease;
 }
 
+/* HOME – PILARES */
+.home-pillars {
+    background-color: #FFFFFF;
+}
 
-/* =========================
-   FOOTER
-========================= */
+.pillar-icon {
+    width: 64px;
+    height: 64px;
+    background-color: #E5E5E5;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
 
+.pillar-icon svg {
+    width: 32px;
+    height: 32px;
+    color: #4A240E;
+}
+
+/* HOME – FEATURED POST */
+.home-featured-post {
+    background-color: #F8F9FA;
+}
+
+.home-latest-posts {
+    background-color: #FFFFFF;
+}
+
+/* css para categoria e botão de vídeo do blog  */
+.custom-link a {
+    display: inline-block;
+    background-color: #f1f3f5;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    color: #4A240E;
+    text-decoration: none;
+    margin-right: 6px;
+}
+
+.custom-link a:hover {
+    background-color: #e9ecef;
+    color: #212529;
+}
+
+button.video-trigger {
+    background: none;
+    padding: 0;
+    margin-left: 5px;
+    color: #4A240E;
+    cursor: pointer;
+}
+
+/* CATEGORIAS */
+.category-card {
+    background-color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+.category-card:hover {
+    border-color: #4A240E;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.categories-hero {
+    background-color: #4A240E;
+    border-radius: 24px;
+}
+
+.categories-hero h1 {
+    color: #FFFFFF;
+    font-size: 2.2rem;
+}
+
+.categories-subtitle {
+    color: #EDEDED;
+    font-size: 1.05rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* CSS DA PAGINA DE GUIAS E ARTIGOS(page) */
+.page-content {
+    max-width: 820px;
+    margin: 0 auto;
+
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #212529;
+}
+
+.page-content h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.page-content h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.page-content p {
+    margin-bottom: 1.25rem;
+}
+
+.page-content ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.page-content li {
+    margin-bottom: 0.5rem;
+}
+
+.page-content a {
+    color: #4A240E;
+    text-decoration: underline;
+}
+
+.page-content a:hover {
+    color: #6A3A1E;
+}
+
+.guide-card {
+    /* background-color: #ffffff; */
+    transition: all 0.2s ease;
+}
+
+.guide-card:hover {
+    border-color: #4A240E;
+    transform: translateY(-2px);
+}
+
+.page-content .learning-path {
+    background-color: #F8F9FA;
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+/* FOOTER */
 .site-footer {
     background-color: #F8F9FA;
     color: #212529;

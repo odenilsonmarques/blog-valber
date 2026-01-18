@@ -1,8 +1,5 @@
 <section class="blog-list py-5">
     <div class="container">
-
-        <!-- <h2 class="text-center mb-4">Listagem de Posts</h2> -->
-
         <div class="row g-4">
             <?php
             $paged = get_query_var('paged') ? get_query_var('paged') : 1;
@@ -16,7 +13,6 @@
             if ($blog_query->have_posts()) :
                 while ($blog_query->have_posts()) : $blog_query->the_post();
             ?>
-
                     <div class="col-md-4 col-sm-6">
 
                         <article class="card h-100 border-0 shadow-sm">
@@ -25,37 +21,6 @@
                                     class="card-img-top"
                                     alt="<?php the_title_attribute(); ?>">
                             <?php endif; ?>
-
-                            <style>
-                                .custom-link a {
-                                    display: inline-block;
-                                    background-color: #f1f3f5;
-                                    /* cor de fundo */
-                                    padding: 4px 10px;
-                                    /* espaçamento interno */
-                                    border-radius: 6px;
-                                    /* cantos arredondados */
-                                    font-size: 0.75rem;
-                                    color: #4A240E;
-                                    text-decoration: none;
-                                    margin-right: 6px;
-                                    /* espaço entre categorias */
-                                }
-
-                                .custom-link a:hover {
-                                    background-color: #e9ecef;
-                                    color: #212529;
-                                }
-
-
-                                button.video-trigger {
-                                    background: none;
-                                    padding: 0;
-                                    margin-left: 5px;
-                                    color: #4A240E;
-                                    cursor: pointer;
-                                }
-                            </style>
 
                             <div class="card-body ">
                                 <span class="text-muted small custom-link">
@@ -76,7 +41,6 @@
                                         </button>
                                     <?php endif; ?>
 
-
                                     <div class="modal fade" id="videoModal" tabindex="-1">
                                         <div class="modal-dialog modal-dialog-centered modal-lg">
                                             <div class="modal-content">
@@ -93,23 +57,6 @@
                                             </div>
                                         </div>
                                     </div>
-
-                                    <script>
-                                        document.addEventListener('DOMContentLoaded', function() {
-                                            const modal = document.getElementById('videoModal');
-                                            const iframe = document.getElementById('videoFrame');
-
-                                            modal.addEventListener('show.bs.modal', function(event) {
-                                                const button = event.relatedTarget;
-                                                const videoUrl = button.getAttribute('data-video');
-                                                iframe.src = videoUrl + '?autoplay=1';
-                                            });
-
-                                            modal.addEventListener('hidden.bs.modal', function() {
-                                                iframe.src = '';
-                                            });
-                                        });
-                                    </script>
                                 </span>
 
                                 <h3 class="h6 mt-2">

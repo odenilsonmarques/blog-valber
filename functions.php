@@ -10,6 +10,9 @@ function blog_valber_assets()
 
     //Bootstrap JS
     wp_enqueue_script('boot-min-js', get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js', array(), '5.3', true);
+
+    //Script Modal Video
+    wp_enqueue_script('script-modal-js', get_template_directory_uri() . '/assets/js/script-modal.js', array(), '1.0.0', true);
 }
 
 add_action('wp_enqueue_scripts', 'blog_valber_assets');

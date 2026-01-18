@@ -9,16 +9,16 @@
 
                 <!-- TEXTO -->
                 <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
-                    <h1 class="fw-bold mb-3">
-                        A música explicada de forma simples
+                    <h1 class="fw-bold mb-3 ms-4">
+                        Bem-vindo ao ValberBrito.com
                     </h1>
 
-                    <p class="text-muted fs-5 mb-4">
+                    <p class="text-muted fs-5 mb-4 ms-4">
                         Escalas, harmonia, improvisação e muito mais.
                     </p>
 
-                    <div class="d-flex gap-3 justify-content-center justify-content-md-start">
-                        <a href="#"
+                    <div class="d-flex gap-3 justify-content-center justify-content-md-start ms-4">
+                        <a href="<?php echo esc_url(home_url('/comece-aqui')); ?>"
                             class="btn custom-btn-hero-home px-4">
                             Comece Aqui
                         </a>
