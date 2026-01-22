@@ -63,6 +63,20 @@ header {
     color: #212529;
 }
 
+
+.btn-button-back-to-blog{
+    background-color: #4A240E;
+    color: #FFFFFF;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-button-back-to-blog:hover {
+    background-color: #6A3A1E;
+    color: #FFFFFF;
+}
+
+
 .card {
     background-color: #FFFFFF;
 }

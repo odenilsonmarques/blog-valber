@@ -67,6 +67,9 @@
                         <p class="fs-5">
                             Nenhum resultado encontrado para sua busca.
                         </p>
+                        <a href="<?php echo esc_url(home_url('/blog')); ?>" class="btn btn-button-back-to-blog mt-3">
+                            Voltar para o Blog
+                        </a>
                     </div>
 
                 <?php endif; ?>
