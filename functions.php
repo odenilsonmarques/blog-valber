@@ -56,3 +56,6 @@ add_action('after_setup_theme', 'blogvalber_config_theme_setup');
 
 // Carregar o arquivo de customizer
 require_once get_template_directory() . '/inc/customizer.php';
+
+// Registrar post types
+require_once get_template_directory() . '/inc/post-types.php';
