@@ -4,7 +4,7 @@
  * Customizer para a seção Hero da Home
  */
 
-function blog_valber_customize_register($wp_customize)
+function blog_valber_customize_register_hero_home($wp_customize)
 {
     // ===== PAINEL HERO HOME =====
     $wp_customize->add_panel('hero_home_panel', array(
@@ -138,4 +138,49 @@ function blog_valber_customize_register($wp_customize)
     ));
 }
 
-add_action('customize_register', 'blog_valber_customize_register');
+add_action('customize_register', 'blog_valber_customize_register_hero_home');
+
+
+
+/**
+ * Customizer para a seção Hero da Página Blog
+ */
+function blog_valber_customize_hero_blog($wp_customize)
+{
+
+    // ===== PAINEL HERO BLOG =====
+    $wp_customize->add_panel('hero_blog_panel', array(
+        'title'       => __('Hero da Página Blog', 'valber-brito'),
+        'description' => __('Configurações da Hero da página Blog', 'valber-brito'),
+        'priority'    => 30,
+    ));
+
+    // ===== SEÇÃO TEXTOS =====
+    $wp_customize->add_section('hero_blog_text', array(
+        'title' => __('Textos da Hero do Blog', 'valber-brito'),
+        'panel' => 'hero_blog_panel',
+    ));
+
+    $wp_customize->add_setting('hero_blog_title', array(
+        'default'           => 'Blog do Valber',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('hero_blog_title', array(
+        'label'   => __('Título da Hero', 'valber-brito'),
+        'section' => 'hero_blog_text',
+        'type'    => 'text',
+    ));
+
+    $wp_customize->add_setting('hero_blog_subtitle', array(
+        'default'           => 'Dicas, tutoriais e insights sobre música.',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('hero_blog_subtitle', array(
+        'label'   => __('Subtítulo da Hero', 'valber-brito'),
+        'section' => 'hero_blog_text',
+        'type'    => 'text',
+    ));
+}
+add_action('customize_register', 'blog_valber_customize_hero_blog');
