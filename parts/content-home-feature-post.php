@@ -15,12 +15,17 @@
 
                     <!-- IMAGEM -->
                     <div class="col-md-5">
+
                         <?php if (has_post_thumbnail()) : ?>
-                            <img
-                                src="<?php echo esc_url(get_the_post_thumbnail_url(get_the_ID(), 'large')); ?>"
-                                class="img-fluid rounded-3"
+                            <img src="<?php echo esc_url(get_the_post_thumbnail_url(get_the_ID(), 'blog-thumb')); ?>"
+                                class="card-img-top"
                                 alt="<?php the_title_attribute(); ?>">
+                        <?php else : ?>
+                            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/image/placeholder-card-post.png'); ?>"
+                                class="card-img-top"
+                                alt="Imagem padrão - <?php the_title_attribute(); ?>">
                         <?php endif; ?>
+
                     </div>
 
                     <!-- CONTEÚDO -->

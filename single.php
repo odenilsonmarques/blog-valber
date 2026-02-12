@@ -30,10 +30,7 @@
                         class="hero-link">
                         Curso completo →
                     </a>
-
-
                 </div>
-
             </section>
 
 
@@ -43,38 +40,50 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
 
-                            <!-- IMAGEM DE DESTAQUE -->
-
-
-
                             <!-- EXCERPT / INTRODUÇÃO -->
-                            <?php if (has_excerpt()) : ?>
+                            <!-- <?php if (has_excerpt()) : ?>
                                 <p class="lead mb-4">
                                     <?php the_excerpt(); ?>
                                 </p>
-                            <?php endif; ?>
+                            <?php endif; ?> -->
 
                             <!-- VÍDEO DO POST -->
                             <?php
                             $video_url = get_post_meta(get_the_ID(), 'video_url', true);
-                            if ($video_url) :
+
+                            // vídeo padrão
+                            $video_padrao = 'https://www.youtube.com/embed/KQWQEbvth8o?si=VMAJwtYA-132T7C9';
+
+                            if ($video_url) {
+                                $video_final = $video_url;
+                            } else {
+                                $video_final = $video_padrao;
+                            }
                             ?>
-                                <div class="video-wrapper mb-5">
-                                    <iframe
-                                        width="100%"
-                                        height="420"
-                                        src="<?php echo esc_url($video_url); ?>"
-                                        frameborder="0"
-                                        allow="autoplay; encrypted-media"
-                                        allowfullscreen>
-                                    </iframe>
-                                </div>
-                            <?php endif; ?>
+
+                            <div class="video-wrapper mb-5">
+                                <iframe
+                                    width="100%"
+                                    height="420"
+                                    src="<?php echo esc_url($video_final); ?>"
+                                    frameborder="0"
+                                    allow="autoplay; encrypted-media"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+
 
                             <!-- CONTEÚDO PRINCIPAL -->
                             <div class="post-content">
-                                <?php the_content(); ?>
+                                <?php
+                                if (get_the_content()) {
+                                    the_content();
+                                } else {
+                                    echo '<p>Em breve teremos mais informações sobre este conteúdo. Fique atento!</p>';
+                                }
+                                ?>
                             </div>
+
 
                             <!-- CTA HOTMART -->
                             <div class="cta-curso mt-5 p-4 rounded">
